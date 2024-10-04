@@ -497,14 +497,15 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
 }
 
-.tbl_full{
-    width: 100%;
+.tbl_full {
     width: 100%;
     border-collapse: collapse;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    min-width: 600px; /* Prevent the table from getting too narrow */
 }
 
 .tbl_full th {
@@ -529,50 +530,47 @@ header {
     padding: 12px;
     border-bottom: 1px solid #ced4da;
     vertical-align: middle;
+    text-align: center; /* Center text content for a cleaner look */
 }
 
-/* Table cell styling */
+/* Image Styling */
 .tbl_full img {
-    max-width: 100px; /* Limit image width */
+    width: 80px; /* Define a specific width */
+    height: 80px; /* Define a specific height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 8px;
 }
 
-table tr th{
+
+table tr th {
     border-bottom: 1px solid black;
     padding: 1%;
     text-align: left;
 }
 
-table tr td{
+table tr td {
     padding: 1%;
 }
 
 /* Button styling */
+/* General Button styling */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 8px 16px; /* Reduced padding for a more compact look */
     border-radius: 6px;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px; /* Slightly smaller font size */
     font-weight: 600;
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     border: 1px solid transparent;
+    margin: 5px; /* Margin to avoid buttons being too close */
+    min-width: 80px; /* Minimum width to prevent overly small buttons */
+    max-width: 150px; /* Maximum width to control size on larger screens */
 }
 
-
-/* .btn_secondary, .btn_danger {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-} */
-
+/* Secondary button styling */
 .btn_secondary {
     background: linear-gradient(135deg, #28a745, #218838);
     border-color: #1e7e34;
@@ -584,13 +582,13 @@ table tr td{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
 .btn_secondary:active {
     background: linear-gradient(135deg, #1e7e34, #218838);
     transform: translateY(1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Danger button styling */
 .btn_danger {
     background: linear-gradient(135deg, #dc3545, #c82333);
     border-color: #bd2130;
@@ -608,31 +606,27 @@ table tr td{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* .btn_secondary{
-    background-color: green;
-    padding: 1%;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4%;
-} */
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .btn {
+        display: inline-block; /* Buttons remain inline */
+        width: auto; /* Buttons take up only necessary space */
+        padding: 8px 12px; /* Compact padding on mobile */
+        margin: 5px; /* Maintain space between buttons */
+        max-width: 120px; /* Control button size on mobile */
+    }
 
-.btn_secondary:hover{
-    background-color: greenyellow;
+    .tbl_full {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .tbl_full img {
+        width: 60px; /* Reduce image size on smaller screens */
+        height: 60px;
+    }
 }
 
-.btn_danger{
-    background-color: red;
-    padding: 1%;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4%;
-}
 
-.btn_danger:hover{
-    background-color: rgb(228, 65, 65);
-}
 
 
 /* These are the styles for forms */

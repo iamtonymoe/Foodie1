@@ -6,7 +6,7 @@ include("../config/config.php")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document22</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style10.css">
     <link rel="stylesheet" href="CSS/cat.carousel1.css">
     <link rel="stylesheet" href="CSS/navtab.css">
     <link rel="stylesheet" href="CSS/search.css">
@@ -38,7 +38,7 @@ include("../config/config.php")
    <header>
     <nav id="navbar">
         <div id="logo">
-            <img src="images/goatmeat1.jpg" alt="Company Logo" class="logo-img">
+            <img src="../images/goatmeat1.jpg" alt="Company Logo" class="logo-img">
             <a href="index.php" class="company-name">Foodie</a>
         </div>
 

@@ -995,7 +995,7 @@ header {
     background-color: rgb(92, 37, 46);
     border-radius: 50%;
     margin: auto;
-    background-image: url(../assets/pexels-chuck-17024710.jpg);
+    background-image: url(../images/pexels-chuck-17024710.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -1005,13 +1005,13 @@ header {
 }
 
 #avatar2{
-    background-image: url(../assets/pexels-cytonn-955388.jpg);
+    background-image: url(../images/pexels-cytonn-955388.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #avatar3{
-    background-image: url(../assets/pexels-miquel-ferran-gomez-figueroa-2172703-3814446.jpg);
+    background-image: url(../images/pexels-miquel-ferran-gomez-figueroa-2172703-3814446.jpg);
     background-position: center;
     background-size: cover;
     

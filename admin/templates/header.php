@@ -7,7 +7,7 @@ include('../config/config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toggle Navbar</title>
-    <link rel="stylesheet" href="css/styles10.css">
+    <link rel="stylesheet" href="css/styles11.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -33,7 +33,7 @@ include('../config/config.php');
     <nav id="navbar">
         <div id="logo">
             <img src="images/goatmeat1.jpg" alt="Company Logo" class="logo-img">
-            <a href="" class="company-name">Company Name</a>
+            <a href="" class="company-name">Foodie</a>
         </div>
 
         <ul class="nav-links">
