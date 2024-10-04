@@ -1,0 +1,176 @@
+/* General form styling */
+.formClass {
+    width: 100%; /* Full width for small screens */
+    max-width: 700px; /* Increased max width for larger screens */
+    margin: auto; /* Center the form */
+    padding: 30px; /* Increased padding around the form */
+    background-color: #ffffff; /* White background for a clean look */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+/* Header styling */
+.form-header {
+    font-size: 28px; /* Slightly larger font size for the header */
+    margin-bottom: 20px; /* More space below the header */
+    text-align: center; /* Center align the header */
+    color: #333; /* Dark color for text */
+}
+
+/* Food details section */
+.food-details {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 25px; /* Increased space below food details */
+}
+
+/* Image styling */
+.foodimage img {
+    width: 130px; /* Slightly increased width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* More rounded corners for the image */
+    margin-right: 20px; /* Space between image and food info */
+    border: 1px solid #ddd; /* Light gray border around the image */
+}
+
+/* Food info styling */
+.food-info {
+    flex-grow: 1; /* Allow food info to grow and take available space */
+}
+
+.food-title {
+    font-size: 22px; /* Increased font size for food title */
+    font-weight: bold; /* Bold text for title */
+    color: #333; /* Dark color */
+    margin-bottom: 5px; /* Space below title */
+}
+
+.food-description {
+    font-size: 16px; /* Slightly larger font for description */
+    color: #666; /* Lighter color for description */
+}
+
+/* Price and quantity styling */
+.food-price-quantity {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack price and quantity vertically */
+    margin-top: 10px; /* Space above price and quantity */
+}
+
+.food-price {
+    font-size: 20px; /* Font size for price */
+    color: #f88643; /* Color to match theme */
+    font-weight: bold; /* Bold font for emphasis */
+    margin-bottom: 12px; /* Space below price */
+}
+
+/* Food quantity styling */
+.food-quantity {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align the label and input */
+}
+
+.food-quantity label {
+    margin-right: 12px; /* Space between label and input */
+    font-size: 16px; /* Font size for the label */
+    color: #333; /* Darker color for labels */
+}
+
+/* Styling for the quantity input */
+.food-quantity input {
+    width: 70px; /* Fixed width for the input */
+    padding: 10px; /* Increased padding for the input */
+    font-size: 16px; /* Font size for input */
+    border: 1px solid #ccc; /* Lighter border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.food-quantity input:focus {
+    border-color: #f88643; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(248, 134, 67, 0.5); /* Subtle shadow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Form grid styling */
+.formGrid {
+    margin-top: 25px; /* Increased space above the grid */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px; /* Increased space between form groups */
+}
+
+/* Label styling */
+.form-group label {
+    display: block; /* Block display for labels */
+    margin-bottom: 6px; /* Space below labels */
+    font-size: 16px; /* Font size for labels */
+    color: #333; /* Dark color for labels */
+}
+
+/* Input field styling */
+.form-group input {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Increased padding for inputs */
+    font-size: 16px; /* Font size for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Focus effect for input fields */
+.form-group input:focus {
+    border-color: #f88643; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(248, 134, 67, 0.5); /* Subtle shadow effect on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Validation message styling */
+.validation-message {
+    font-size: 14px; /* Font size for validation messages */
+    color: red; /* Red color for error messages */
+}
+
+/* Button group styling */
+.button-group {
+    text-align: center; /* Center align buttons */
+    margin-top: 30px; /* Increased space above button group */
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #f88643; /* Button color to match theme */
+    color: white; /* Text color for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px; /* Increased padding for button */
+    font-size: 18px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor for button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.submit-btn:hover {
+    background-color: #e87530; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .formClass {
+        width: 95%; /* Adjust form width for small screens */
+    }
+
+    .food-image img {
+        width: 100px; /* Smaller image on mobile */
+    }
+
+    .food-quantity input {
+        width: 60px; /* Smaller width for input on mobile */
+    }
+}

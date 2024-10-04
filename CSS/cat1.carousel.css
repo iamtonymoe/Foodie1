@@ -1,0 +1,145 @@
+/* Container for section */
+.section-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #fff; /* White background for the section */
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin-bottom: 20px; /* Space below the section */
+}
+
+/* Header or Caption */
+.section-header {
+    font-size: 1.6em; /* Slightly smaller font size for a shorter header */
+    color: #222; /* Slightly darker color for a more refined look */
+    font-family: 'Poppins', sans-serif; /* Modern and approachable font */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Space below the header */
+    text-transform: uppercase; /* Uppercase for a modern touch */
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+    font-weight: 600; /* Semi-bold for emphasis */
+}
+
+/* Container for horizontal scrolling */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px; /* Add padding for spacing */
+    scroll-snap-type: x mandatory; /* Snap to each card */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background: linear-gradient(135deg, #f0f0f0, #ffffff); /* Subtle gradient background */
+    border-radius: 15px; /* Rounded corners for the container */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    gap: 15px; /* Space between cards */
+    height: 350px; /* Expanded height for more space */
+    align-items: center; /* Center cards vertically */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    justify-content: flex-start; /* Align cards to the start */
+    padding-left: 20px; /* Add padding to prevent cut-off on left edge */
+    padding-right: 20px; /* Add padding to prevent cut-off on right edge */
+}
+
+/* Individual category card */
+.category-card {
+    flex: 0 0 auto; /* Prevent card from shrinking or growing */
+    width: calc(20% - 20px); /* Show 5 cards at a time by default */
+    background-color: #fff; /* White background for the card */
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    text-align: center;
+    display: flex; /* Ensure proper alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
+}
+
+/* Stylish card image */
+.category-card img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for card */
+.category-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
+/* Hover effect for image */
+.category-card:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Card Title */
+.category-card h2 {
+    margin: 10px 0; /* Margin around the title */
+    font-size: 1.2em; /* Larger font size for the title */
+    color: #333; /* Dark color for better readability */
+    font-family: 'Poppins', sans-serif; /* Consistent font with header */
+    word-wrap: break-word; /* Prevent text overflow */
+    text-decoration: none; /* Ensure no underline */
+}
+
+/* Hide scrollbars for a cleaner look (optional) */
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .category-card {
+        width: calc(25% - 15px); /* Show 4 cards at a time */
+    }
+}
+
+@media (max-width: 900px) {
+    .category-card {
+        width: calc(33.33% - 15px); /* Show 3 cards at a time */
+    }
+}
+
+@media (max-width: 600px) {
+    .horizontal-scroll-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        height: 280px; /* Adjust height for smaller screens */
+    }
+
+    .category-card {
+        width: calc(40% - 10px); /* Show 2 cards at a time */
+    }
+
+    .category-card img {
+        height: 140px; /* Adjust image height for smaller screens */
+    }
+
+    .category-card h2 {
+        font-size: 1em; /* Smaller font size for the title */
+    }
+}
+
+@media (max-width: 400px) {
+    .horizontal-scroll-container {
+        padding: 5px; /* Further reduced padding for very small screens */
+        height: 240px; /* Further reduced height */
+    }
+
+    .category-card {
+        width: calc(60% - 10px); /* Make cards even smaller, show 1.5 cards at a time */
+    }
+
+    .category-card img {
+        height: 120px; /* Adjust image height further */
+    }
+
+    .category-card h2 {
+        font-size: 0.9em; /* Smaller font size for the title */
+    }
+}

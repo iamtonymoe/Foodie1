@@ -1,0 +1,204 @@
+/* Base Styling for the Form */
+.formClass {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #f88643; /* Orange border to match button */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* White background for clarity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+/* Form Header Styling */
+.form-header {
+    font-size: 28px; /* Larger font size for header */
+    font-weight: bold;
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Space below header */
+    color: #333; /* Darker color for better readability */
+}
+
+/* Single-column layout for mobile */
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single-column layout by default */
+    gap: 15px; /* Space between rows */
+}
+
+/* Full-width fields for Address and Delivery Address */
+.full-width {
+    grid-column: 1 / -1; /* Full width */
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333; /* Darker color for labels */
+}
+
+.form-group input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.form-group input:focus {
+    border-color: #f88643; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(248, 134, 67, 0.5); /* Subtle shadow effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit button styling */
+.button-group {
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: #100f0f;
+    color: white;
+    padding: 12px 24px; /* Adjust padding for mobile screens */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px; /* Font size for readability */
+    text-align: center;
+    display: block;
+    margin: 20px auto; /* Center button horizontally with margin */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.submit-btn:hover {
+    background-color: #e87530; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Privacy Policy and Sign Up with Gmail Button */
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.privacy-policy {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.privacy-policy a {
+    color: #f88643;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up with Gmail Button */
+.gmail-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text and icon inside the button */
+    background: linear-gradient(135deg, #4285F4, #34a853); /* Gradient background from Gmail colors */
+    color: white;
+    padding: 8px 16px; /* Adjust padding for balance */
+    border-radius: 50px; /* Rounded corners for a modern look */
+    text-decoration: none;
+    font-size: 14px; /* Font size */
+    font-weight: bold;
+    margin: 10px auto; /* Center the button horizontally with margin */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 50%; /* Set width to 50% of the container */
+    max-width: 300px; /* Optional: set a max-width to prevent the button from becoming too wide */
+}
+
+.gmail-btn:hover {
+    background: linear-gradient(135deg, #357ae8, #2c8e3e); /* Darker gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.gmail-icon {
+    font-size: 16px; /* Adjust icon size for better fit */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Validation message styling */
+/* Validation message styling */
+.validation-message {
+    color: #888; /* Lighter gray color for subtlety */
+    font-size: 12px; /* Smaller font size for a more subtle look */
+    margin-top: 3px; /* Less space above the message */
+    display: block; /* Ensure it appears below the input */
+    opacity: 0.8; /* Slightly transparent for a softer effect */
+}
+
+/* Password Requirements Styling */
+.password-requirements {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light background */
+    font-size: 14px; /* Standard font size */
+}
+
+.password-requirements p {
+    margin: 0;
+    font-weight: bold;
+    color: #333; /* Darker color for emphasis */
+}
+
+.password-requirements ul {
+    list-style-type: disc; /* Bullet points */
+    margin: 10px 0 0 20px; /* Adjust margins */
+}
+
+.password-requirements li {
+    margin-bottom: 5px;
+    color: #666; /* Subtle gray color */
+}
+
+
+
+
+/* Responsive Styling for Tablet and Desktop */
+@media (min-width: 600px) {
+    .submit-btn {
+        font-size: 17px; /* Larger font size */
+        padding: 14px 28px; /* Increased padding */
+    }
+
+    .form-header {
+        font-size: 30px; /* Larger font size for tablets */
+    }
+}
+
+@media (min-width: 768px) {
+    .submit-btn {
+        font-size: 18px; /* Larger font size for desktops */
+        padding: 16px 32px; /* More padding for larger screens */
+    }
+
+    .form-header {
+        font-size: 32px; /* Larger font size for desktops */
+    }
+}

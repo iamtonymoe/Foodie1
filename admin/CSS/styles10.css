@@ -1,0 +1,801 @@
+/* style class */
+.text_center{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* this is the style for mobiles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* these are the styles for the navbar */
+/* General Header Styling */
+header {
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgb(34, 33, 33);
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick it to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Navbar Styling */
+#navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(245, 164, 14, 0.3);
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+#navbar:hover {
+    background: linear-gradient(135deg, rgba(245, 164, 14, 0.5), rgba(245, 164, 14, 0.7));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+    filter: brightness(1.1);
+}
+
+/* Logo and Company Name */
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.company-name {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.company-name:hover {
+    color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgba(245, 164, 14, 1);
+    transform: translateY(-2px);
+}
+
+/* Icons Styling */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.icon-wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-icon.cart {
+    display: block; /* Ensure cart icon is visible on larger screens */
+}
+
+.nav-icon.notifications {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styling */
+.nav-btn .btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(236, 103, 42);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.nav-btn .btn:hover {
+    background-color: rgba(245, 164, 14, 1);
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Mobile Menu Toggle (Hamburger) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Align sidebar to the right */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(245, 164, 14, 0.9);
+    padding: 20px;
+    display: none; /* Hide by default */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow adjusted to the right */
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    transform: translateX(100%); /* Initially hide the sidebar off-screen */
+}
+
+.sidebar.show {
+    display: block;
+    transform: translateX(0); /* Slide the sidebar in from the right */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    color: white;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.sidebar-links li {
+    margin: 15px 0;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.sidebar-links a:hover {
+    color: rgba(245, 164, 14, 1);
+}
+
+/* Adjustments for Cart Icon in Sidebar */
+.sidebar .cart-link .nav-icon.cart {
+    color: white; /* Ensure the icon color is visible against the background */
+    font-size: 1.5rem; /* Adjust size as needed */
+    display: block; /* Ensure the icon is displayed */
+    margin-bottom: 15px; /* Space between items */
+}
+
+/* Adjustments for Logout Button in Sidebar */
+.sidebar .sidebar-btn {
+    display: block;
+    margin-top: auto; /* Push the button to the bottom */
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, rgba(236, 103, 42, 0.9), rgba(236, 103, 42, 0.7));
+    text-align: center;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar .sidebar-btn:hover {
+    background: linear-gradient(135deg, rgba(236, 103, 42, 1), rgba(236, 103, 42, 0.8));
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.sidebar .sidebar-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(236, 103, 42, 0.5);
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: rgb(236, 103, 42);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: rgba(245, 164, 14, 0.8);
+}
+
+.search-bar i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Adjustments for Larger Screens */
+@media (min-width: 1200px) {
+    .search-bar {
+        width: 70%; /* Reduce width on larger screens */
+        padding: 5px 8px; /* Adjust padding as needed */
+    }
+
+    .search-bar input[type="text"] {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .search-bar button {
+        padding: 6px 12px; /* Smaller padding for button */
+    }
+}
+
+/* Further Adjustments for Very Large Screens (Optional) */
+@media (min-width: 1600px) {
+    .search-bar {
+        width: 60%; /* Further reduce width for very large screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) and (min-width: 768px) {
+    #navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 15px;
+        justify-content: space-between; /* Ensure space between items */
+    }
+
+    .nav-links {
+        margin-left: 30px; /* Shift navigation links further to the left */
+        display: flex;
+        gap: 20px; /* Ensure space between links */
+    }
+
+    .nav-icons {
+        display: flex;
+        gap: 10px; /* Reduce gap between icons */
+        align-items: center;
+    }
+
+    .nav-icon {
+        font-size: 1.2rem; /* Smaller icons */
+    }
+
+    .nav-btn .btn {
+        padding: 8px 16px; /* Smaller button padding */
+        font-size: 0.8rem; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between; /* Ensure space between items */
+    }
+
+    .nav-links {
+        display: none; /* Hide desktop navigation */
+    }
+
+    .nav-btn, .menu-toggle {
+        display: flex;
+        align-items: center;
+        margin: 0 10px; /* Adjust margin for alignment */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .nav-btn .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    /* Hide cart icon from the navbar on mobile screens */
+    .nav-icons .cart-link {
+        display: none;
+    }
+
+    /* Show cart icon in the sidebar on mobile screens */
+    .sidebar .cart-link {
+        display: block;
+    }
+
+    /* Hide logout button in navbar on mobile screens */
+    .nav-btn .btn {
+        display: none;
+    }
+
+    /* Adjust company name and notification icon size on mobile screens */
+    .company-name {
+        font-size: 1.2rem; /* Smaller font size for the company name */
+    }
+
+    .nav-icon.notifications {
+        font-size: 1.2rem; /* Smaller size for notification icon */
+    }
+}
+
+@media (max-width: 400px) {
+    .company-name {
+        font-size: 1rem; /* Further reduce font size for very small screens */
+    }
+
+    .nav-btn .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* these are the styles for the main content */
+.sectionName{
+    padding: 1%;
+    margi-left: 1%;
+}
+
+.sectionName h2{
+    padding: ;
+    color: red;
+}
+
+.mainContent{
+    padding: 2%;
+}
+
+.btn_primary{
+    background-color: blue;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4%;
+}
+
+.btn_primary:hover{
+    background-color: blueviolet;
+}
+
+.success{
+    color: green;
+}
+
+.error{
+    color: red;
+}
+
+
+
+
+
+
+
+/* this is the style for table */
+/* Table container styling */
+.table {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.tbl_full{
+    width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.tbl_full th {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #495057;
+    font-weight: 600;
+}
+
+/* Table row styling */
+.tbl_full tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+.tbl_full tr:hover {
+    background-color: #dee2e6;
+}
+
+.tbl_full td, .tbl_full th {
+    padding: 12px;
+    border-bottom: 1px solid #ced4da;
+    vertical-align: middle;
+}
+
+/* Table cell styling */
+.tbl_full img {
+    max-width: 100px; /* Limit image width */
+    border-radius: 8px;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+
+/* .btn_secondary, .btn_danger {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+} */
+
+.btn_secondary {
+    background: linear-gradient(135deg, #28a745, #218838);
+    border-color: #1e7e34;
+}
+
+.btn_secondary:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn_secondary:active {
+    background: linear-gradient(135deg, #1e7e34, #218838);
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn_danger {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    border-color: #bd2130;
+}
+
+.btn_danger:hover {
+    background: linear-gradient(135deg, #c82333, #bd2130);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn_danger:active {
+    background: linear-gradient(135deg, #bd2130, #c82333);
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* .btn_secondary{
+    background-color: green;
+    padding: 1%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4%;
+} */
+
+.btn_secondary:hover{
+    background-color: greenyellow;
+}
+
+.btn_danger{
+    background-color: red;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4%;
+}
+
+.btn_danger:hover{
+    background-color: rgb(228, 65, 65);
+}
+
+
+/* These are the styles for forms */
+
+/* this is the styling for add admin form */
+/* General Form Styles */
+.addAdminForm {
+    width: 60%;
+    margin: auto;
+    border: 1px solid #007bff;
+    background-color: #ffffff;
+    padding: 2% 4%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+/* Fieldset and Legend */
+.formFieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formLegend {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form Group Styles */
+.formGroup {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formLabel {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* Input Fields */
+.formInput {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.formInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* File Input */
+.formInput[type="file"] {
+    padding: 0;
+}
+
+/* Radio Buttons */
+.formRadioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-radio input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.radio-custom {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    background-color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-right: 10px;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-custom {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-custom::after {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is the style for the footer */
+footer{
+    padding: 1%;
+    margin-top: 10px;
+    background-color: antiquewhite;
+}
+
+
+footer span{
+
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 720px){
+   
+    
+}
+
+

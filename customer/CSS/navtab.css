@@ -1,0 +1,176 @@
+/* General Styles */
+.unique-nav-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line wrapping */
+    padding: 15px 0;
+    border-bottom: 2px solid rgb(236, 103, 42); /* Match header color */
+    background-color: rgba(245, 164, 14, 0.3); /* Match navbar background color */
+    position: sticky; /* Stick the nav to the top */
+    top: 0; /* Position it at the top */
+    z-index: 10; /* Ensure it stays above other content */
+}
+
+/* Nav Tabs */
+.unique-nav-tabs {
+    display: flex; /* Align items in a row */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.unique-nav-item {
+    display: inline-block;
+}
+
+.unique-nav-link {
+    padding: 12px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(236, 103, 42); /* Orange text to match header */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+    position: relative;
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.unique-nav-link:hover, .unique-nav-link.active {
+    background-color: rgba(245, 164, 14, 0.5); /* Light orange for hover/active */
+    color: rgb(236, 103, 42); /* Orange text to match header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+}
+
+.unique-nav-link.active {
+    background-color: rgb(236, 103, 42); /* Orange background for active state */
+    color: white; /* White text for active link */
+}
+
+.unique-nav-link.active::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: white; /* Underline color for active link */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Custom scrollbar appearance */
+.unique-nav-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.unique-nav-container::-webkit-scrollbar-thumb {
+    background-color: rgb(236, 103, 42); /* Orange scrollbar thumb */
+    border-radius: 4px;
+}
+
+.unique-nav-container::-webkit-scrollbar-track {
+    background-color: rgba(245, 164, 14, 0.3); /* Light orange for scrollbar track */
+}
+
+/* Tab content */
+.unique-tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white; /* White background */
+}
+
+.unique-tab-pane {
+    display: none; /* Initially hide all tab panes */
+    opacity: 0;
+    transform: translateY(20px); /* Slide-in effect */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
+}
+
+.unique-tab-pane.active {
+    display: grid; /* Use grid layout */
+    opacity: 1;
+    transform: translateY(0); /* Move back to original position */
+}
+
+/* Grid Layout for Food Items */
+.tab-pane {
+    gap: 15px; /* Space between items */
+}
+
+/* Responsive Grid Settings */
+@media (max-width: 768px) {
+    .unique-tab-pane {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .unique-tab-pane {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media (min-width: 1025px) {
+    .unique-tab-pane {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    }
+}
+
+/* Styling for food items */
+.food-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .unique-nav-container {
+        padding: 10px 0;
+    }
+
+    .unique-nav-tabs {
+        overflow-x: auto; /* Ensure horizontal scroll for mobile */
+    }
+
+    .unique-nav-link {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+        padding: 10px 15px; /* Adjust padding */
+        margin-right: 8px; /* Adjust margin */
+    }
+
+    .unique-tab-content {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .unique-nav-container {
+        padding: 15px 0;
+    }
+
+    .unique-nav-link {
+        font-size: 0.9rem; /* Ensure font size is consistent for larger screens */
+        padding: 12px 20px; /* Ensure padding is appropriate */
+        margin-right: 10px; /* Maintain margin */
+    }
+
+    .unique-tab-content {
+        padding: 20px; /* Ensure padding is appropriate for larger screens */
+    }
+}
+
+/* Accessibility Styles */
+.unique-nav-link:focus {
+    outline: 2px solid rgb(236, 103, 42); /* Visible focus state */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,142 @@
+/* Base Styling for the Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+/* Base Styling for the Form */
+.loginForm {
+    max-width: 400px; /* Set a max-width to make the form smaller */
+    width: 100%; /* Full width up to max-width */
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #f88643; /* Orange border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for clarity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form Header Styling */
+.form-header {
+    font-size: 24px; /* Adjusted font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Space below header */
+    color: #333; /* Darker color for readability */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #f88643; /* Highlight border on focus */
+    outline: none;
+}
+
+/* Submit button styling */
+.button-group {
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: #333; /* Dark background for the button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.submit-btn:hover {
+    background-color: #111; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Gmail Login Styling */
+.external-login {
+    text-align: center;
+    margin-top: 20px; /* Space between submit and Gmail login */
+}
+
+.gmail-login {
+    display: inline-flex;
+    align-items: center; /* Align icon and text vertically */
+    background-color: #db4437; /* Gmail red color */
+    color: white;
+    padding: 8px 16px; /* Smaller padding for a compact button */
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gmail-login:hover {
+    background-color: #c5362b; /* Darker red on hover */
+    box-shadow: 0 4px 12px rgba(219, 68, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+.gmail-login .icon {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 16px;
+}
+
+/* Privacy Policy Link Styling */
+.privacy-policy {
+    text-align: center;
+    margin-top: 15px; 
+}
+
+.policy-link {
+    color: #888;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.policy-link:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (min-width: 600px) {
+    .submit-btn {
+        font-size: 16px; /* Larger font size */
+        padding: 12px 24px; /* Increased padding */
+    }
+
+    .form-header {
+        font-size: 26px; /* Larger font size */
+    }
+}
